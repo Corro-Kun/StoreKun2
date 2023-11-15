@@ -1,0 +1,26 @@
+---
+
+---
+<div class="Video-Main" >
+    <video autoplay muted loop >
+        <source src="https://res.cloudinary.com/daqrkk4sr/video/upload/v1700077708/kf0afnueogzmfwykhxkl.mp4" type="video/mp4" >
+    </video>
+    <slot />
+</div>
+
+<style>
+    .Video-Main {
+        width: 100%;
+        height: calc( 90vh + 5px);
+        overflow: hidden;
+    }
+    video {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+</style>

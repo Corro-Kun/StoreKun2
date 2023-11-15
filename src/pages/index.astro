@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro"
+import BodyWallpaper from "../components/BodyWallpaper.astro"
+---
+
+<Layout title="StoreKun" >
+    <Header />
+    <BodyWallpaper>
+        <div class="Main-Descripcion" >
+            <h1>Bienvenido a Store-Kun</h1>
+            <div class="Descripcion-p" >
+                <p>Un rincon de internet para que puedas descargar aplicaciones/programas para que te entretengas.</p>
+            </div>
+        </div>
+        <div class="Aplication-Div" >
+            <div class="Aplicaction-Warp" >
+                <div class="Ficha-Aplication" >
+                    <h2>hola</h2>
+                </div>
+                <div class="Ficha-Aplication" >
+                    <h2>hola</h2>
+                </div>
+                <div class="Ficha-Aplication" >
+                    <h2>hola</h2>
+                </div>
+
+            </div>
+        </div>
+    </BodyWallpaper>
+</Layout>
+
+<style>
+    .Video-Main {
+        width: 100%;
+        height: calc( 90vh + 5px);
+        overflow: hidden;
+    }
+    video {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+    .Main-Descripcion{
+        display: flex;
+        padding: 0 100px;
+        height: 50vh;
+        color: #fff;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Main-Descripcion h1{
+        font-size: 4em;
+        width: 35%;
+        background-image: linear-gradient(to right, #ffffff, #188C77);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .Descripcion-p{
+        width: 20%;
+        text-shadow: 0 0 5px #188C77;
+    }
+    .Aplication-Div{
+        padding: 20px 100px;
+        height: 100%;
+        border: 2px solid #188C77;
+        border-radius: 20px 20px 0 0;
+        backdrop-filter: blur(3px);
+        background-image: linear-gradient(to top, rgb(16, 28, 40,1), rgba(16, 28, 40, 0));
+    }
+    .Aplicaction-Warp{
+        display: flex;
+        height: 42%;
+        flex-wrap: nowrap;
+        gap: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+    .Ficha-Aplication{
+        height: 76%;
+        width: 14%;
+        border-radius: 10px;
+        background-color: black;
+        cursor: pointer;
+        transition: .5s;
+    }
+    .Ficha-Aplication:hover{
+        transform: scale(1.03);
+    }
+</style>

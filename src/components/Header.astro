@@ -1,0 +1,49 @@
+---
+
+---
+<header>
+    <div class="Blur-Top"/>
+    <div class="Blur-Bottom" />
+    <nav class="Text-Header" >
+        <h2>StoreKun</h2>
+    </nav>
+</header>
+
+<style>
+    header{
+        height: 90px;
+        position: relative;
+        overflow: hidden;
+    }
+    .Text-Header{
+        display: flex;
+        position: absolute;
+        padding: 0px 100px;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        align-items: center;
+        color: #fff;
+        text-shadow: 0px 0px 8px var(--Text_Color);
+    }
+    .Blur-Top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(1px);
+        z-index: 1; /* Asegura que esté detrás de las otras capas */
+        background-image: var(--Bg_Blur);
+    }
+    .Blur-Bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(1px);
+        z-index: 2; 
+        background-image: linear-gradient(to bottom, rgb(16, 28, 40,1), rgba(16, 28, 40, 0));
+    }
+</style>
