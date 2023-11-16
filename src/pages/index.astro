@@ -5,16 +5,23 @@ import BodyWallpaper from "../components/BodyWallpaper.astro";
 import Main from "../components/Main.astro";
 import Container from "../components/Container.astro";
 import Ficha from "../components/Ficha.astro";
+
+import {data} from "../data/Aplications.ts";
 ---
 
-<Layout title="StoreKun" >
-    <Header />
-    <BodyWallpaper>
-        <Main />
-        <Container>
-            <Ficha />
-        </Container>
-    </BodyWallpaper>
+<Layout title="Home" >
+    <Main />
+    <Container>
+        {
+            data.map((item)=>(
+                <Ficha 
+                title={item.title} 
+                descripcion={item.info.substring(0, 108) + "..."} 
+                image={item.image} 
+                />
+            ))
+        }
+    </Container>
 </Layout>
 
 <style>

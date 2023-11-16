@@ -18,10 +18,21 @@
         backdrop-filter: blur(3px);
         background-image: linear-gradient(to top, rgb(16, 28, 40,1), rgba(16, 28, 40, 0));
         transition: .5s ease-in-out;
+        animation: EntradaBar 1s ease-in-out;
     }
     .Aplication-Div:hover{
         transform: translateY(0%);
     }
+
+    @keyframes EntradaBar {
+        0%{
+            transform: translateY(40%);
+        }
+        100%{
+            transform: translateY(38%);
+        }
+    }
+
     .Title-Aplication{
         width: 18%;
         background-image: linear-gradient(to right, #ffffff, #188C77);

@@ -4,10 +4,14 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import BodyWallpaper from '../components/BodyWallpaper.astro';
+import Header from '../components/Header.astro';
+import {ViewTransitions} from "astro:transitions";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -15,9 +19,13 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<BodyWallpaper>
+			<slot />
+		</BodyWallpaper>
 	</body>
 </html>
 

@@ -23,10 +23,31 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        animation: EntradaMainH .9s ease-in-out;
     }
     .Descripcion-p{
         width: 20%;
         text-shadow: 0 0 5px #188C77;
+        animation: EntradaMainP .9s ease-in-out;
     }
- 
+    @keyframes EntradaMainH {
+        0%{
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes EntradaMainP {
+        0%{
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>

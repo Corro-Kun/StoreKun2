@@ -1,19 +1,25 @@
 ---
+interface Props {
+	title: string;
+    descripcion: string;
+    image: string;
+}
 
+const { title, descripcion, image } = Astro.props;
 ---
 
 <div class="Ficha-Aplication" >
     <picture>
-        <img src="https://png.pngtree.com/background/20230614/original/pngtree-anime-white-fox-boy-playing-headphones-in-a-dungeon-picture-image_3525271.jpg" alt="Imagen">
+        <img src={image} alt="Imagen">
     </picture>
     <div class="Div-descripcion-aplication" >
         <div class="Render-Descripcion-Aplication" >
             <div>
-                <h3>Aplicación</h3>
+                <h3>{title}</h3>
                 <div class="Border-Decore" />
             </div>
             <div>
-                <p>kajfljsfjlsajkfjlskjdfkljakslfjklsdjflkjsaklfjklsdjfkljsaklfjklsafklj</p>
+                <p>{descripcion}</p>
             </div>
             <div class="Ficha-button" >
                 <button>Explorar</button>
@@ -29,7 +35,6 @@
         width: 15%;
         border-radius: 10px;
         background-color: #188C77;
-        cursor: pointer;
         transition: .5s;
         box-shadow: 0 0 20px #1b4644;
         overflow: hidden;
@@ -51,8 +56,6 @@
         border: 1px solid #188C77;
         backdrop-filter: blur(10px);
         border-radius: 10px 10px 0 0;
-        text-wrap: nowrap;
-        word-break: break-all;
         color: #fff;
         overflow: hidden;
     }
@@ -75,6 +78,7 @@
         color: #dfdfdf;
         font-size: 13px;
         text-shadow: 0 0 3px #000;
+        word-break: break-all;
     }
     .Ficha-Aplication:hover{
         transform: scale(1.03);

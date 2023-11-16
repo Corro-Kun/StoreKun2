@@ -6,8 +6,8 @@
     const variables = Math.floor(Math.random() * wallpapers.length);
 ---
 <div class="Video-Main" >
-    <video autoplay muted loop >
-        <source src={wallpapers[0]} type="video/mp4" >
+    <video autoplay muted loop transition:persist >
+        <source src={wallpapers[variables]} type="video/mp4" >
     </video>
     <slot />
 </div>
