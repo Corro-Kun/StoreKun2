@@ -9,12 +9,13 @@ import Ficha from "../components/Ficha.astro";
 import {data} from "../data/Aplications.ts";
 ---
 
-<Layout title="Home" >
+<Layout title="Home" aplication={false}>
     <Main />
     <Container>
         {
             data.map((item)=>(
-                <Ficha 
+                <Ficha
+                id={item.id} 
                 title={item.title} 
                 descripcion={item.info.substring(0, 108) + "..."} 
                 image={item.image} 

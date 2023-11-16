@@ -1,5 +1,8 @@
 ---
-
+interface Props{
+    aplication: boolean;
+}
+const {aplication} = Astro.props;
 ---
 <header>
     <div class="Blur-Top"/>
@@ -7,9 +10,9 @@
     <nav class="Text-Header" >
         <h2>StoreKun</h2>
         <div>
-            <a href="./">Inicio</a>
-            <a href="./explore">Explorar</a>
-            <a href="./updates">Actualizaciones</a>
+            <a href={aplication? "../" : "./"}>Inicio</a>
+            <a href={aplication? "../explore": "./explore"}>Explorar</a>
+            <a href={aplication? "../updates": "./updates"}>Actualizaciones</a>
         </div>
     </nav>
 </header>

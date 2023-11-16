@@ -1,0 +1,113 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {data} from "../../data/Aplications.ts";
+
+export function getStaticPaths(){
+    return data.map((item) => ({params: {id: item.id}}));
+}
+const {id} = Astro.params;
+const app = data.find((item) => item.id === id);
+---
+
+<Layout title={app.title} aplication >
+    <div class="Div-Main-Aplication" >
+        <div class="Div-Render-Place" >
+            <div class="Div-Images-Preview" >
+                <h2>hola</h2>
+            </div>
+            <div class="Div-Information-Preview" >
+                <h2>{app.title}</h2>
+                <h3>{app.price}</h3>
+                <button>Descargar</button>
+                <h4>version: {app.version}</h4>
+                <h4>plataforma: {app.platform}</h4>
+                <div class="Preview-Descripcion" >
+                    <h3>Descripción:</h3>
+                    <h4>{app.info}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .Div-Main-Aplication{
+        display: flex;
+        height: 95%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .Div-Render-Place{
+        display: flex;
+        width: 75%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        border: 2px solid #188C77;
+        border-radius: 10px;
+        animation: EntradaPlace .3s ease;
+    }
+    .Div-Images-Preview{
+        width: 50%;
+        height: 100%;
+    }
+
+    .Div-Information-Preview{
+        display: flex;
+        padding: 15px 30px;
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .Div-Information-Preview h2{
+        width: 30%;
+        font-size: 1.8em;
+        background-image: linear-gradient(to right, #fff, #188C77);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+    }
+    .Div-Information-Preview h3{
+        text-shadow: 0 0 1px #000000;
+    }
+    .Div-Information-Preview button{
+        margin: 25px 0;
+        height: 35px;
+        width: 100px;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        background-color: #188C77;
+        cursor: pointer;
+    }
+    .Div-Information-Preview h4{
+        color: #fff;
+    }
+    .Preview-Descripcion{ 
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        margin-top: 24px;
+        height: 100%;
+    }
+    .Preview-Descripcion h3{
+        width: 20%;
+        text-shadow: 0 0 1px #000;
+    }
+    .Preview-Descripcion h4{
+        margin-top: 10px;
+        text-shadow: 0 0 3px #000;
+    }
+
+    @keyframes EntradaPlace {
+        0%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        100%{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>

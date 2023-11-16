@@ -3,9 +3,10 @@ interface Props {
 	title: string;
     descripcion: string;
     image: string;
+    id: string
 }
 
-const { title, descripcion, image } = Astro.props;
+const { title, descripcion, image, id } = Astro.props;
 ---
 
 <div class="Ficha-Aplication" >
@@ -22,12 +23,12 @@ const { title, descripcion, image } = Astro.props;
                 <p>{descripcion}</p>
             </div>
             <div class="Ficha-button" >
-                <button>Explorar</button>
+                <a href=`/aplication/${id}`>Explorar</a>
             </div>
         </div>
     </div>
 </div>
- 
+
 <style>
     .Ficha-Aplication{
         position: relative;
@@ -91,7 +92,7 @@ const { title, descripcion, image } = Astro.props;
         align-items: center;
         justify-content: center;
     }
-    .Ficha-button button{
+    .Ficha-button a{
         padding: 4px 10px 4px 10px;
         cursor: pointer;
         border: none;
@@ -99,8 +100,11 @@ const { title, descripcion, image } = Astro.props;
         background-color: #fff;
         box-shadow: 0 2px 5px #666666;
         transition: .2s;
+        text-decoration: none;
+        color: #188c77;
+        font-size: 14px;
     }
-    .Ficha-button button:hover{
+    .Ficha-button a:hover{
         background-color: #dbdbdb;
     }
 </style>
