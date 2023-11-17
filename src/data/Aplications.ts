@@ -10,11 +10,20 @@ export const data =[
         version: "0.3.0",
         images: [
             "https://res.cloudinary.com/daqrkk4sr/image/upload/v1696623745/store-kun/AudioPlayer/vista_vnuzgb.png",
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1700180001/store-kun/AudioPlayer/qreqczbzd4sojaonniaw.png",
             "https://res.cloudinary.com/daqrkk4sr/image/upload/v1696623920/store-kun/AudioPlayer/img_1_hjmwcy.png",
             "https://res.cloudinary.com/daqrkk4sr/image/upload/v1696623992/store-kun/AudioPlayer/img_2_ov9cz0.png",
             "https://res.cloudinary.com/daqrkk4sr/image/upload/v1696624051/store-kun/AudioPlayer/img_3_pl8pw3.png"
         ],
         info: "Un reproductor de audio local sin conexión a internet con un diseño minimalista y elegante que puedes personalizar a tu gusto o preferencias,IMPORTANTE: este reproductor no reproduce música de Spotify, YouTube, etc. solo reproduce música que tengas en tu dispositivo que tenga formato mp3 asta el momento. Para implementar música en el solo tienes que ponerla en la carpeta música que se encuentra usuario/música, para cambiar el fondo de tu aplicación tienes que crear una carpeta en usuario/Videos, que se llame fondos y poner los videos que queras de fondo, solo formato MP4, y ahora DISFRUTA DE TU MÚSICA FAVORITA.",
-        download: "https://www.mediafire.com/file/54qyqdfvqmrx0jq/Audioplayer_0.3.0_x64-setup.exe/file"
+        download: "https://www.mediafire.com/file/54qyqdfvqmrx0jq/Audioplayer_0.3.0_x64-setup.exe/file",
+        updates:[
+            {
+                version: "0.3.0",
+                data: "Octubre. 05, 2023",
+                description: "Se libero la primera versión de la aplicación",
+                link: "https://github.com/Corro-Kun/Audioplayer/releases/tag/v0.3.0-beta"
+            }
+        ]
     }
 ]
