@@ -1,8 +1,44 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import FichaUpdate from "../components/FichaUpdate.astro";
+import {data} from "../data/Updates.ts";
 ---
 
 <Layout title="Actualizaciones" aplication={false} >
-
+    <div>
+        <h1>Actualizaciones</h1>
+        {
+            data.map((item)=>(
+                <FichaUpdate Imagen={item.image} title={item.title} date={item.data} description={item.description} version={item.version} url={item.link} />
+            ))
+        }
+    </div>
 </Layout>
+
+<style>
+    div{
+        padding: 10px 250px;
+        height: 100%;
+        overflow: auto;
+    }
+    h1{
+        width: 35%;
+        background-image: linear-gradient(to right, #ffffff, #188C77);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: EntradaH1Title .6s ease-out;
+    }
+
+    @keyframes EntradaH1Title {
+        0%{
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
 

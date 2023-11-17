@@ -3,5 +3,34 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Aplicaciones" aplication={false} >
-
+    <div>
+        <h1>Estoy trabajando para traerles esta secion :,v</h1>
+        <img src="https://usagif.com/wp-content/uploads/gif/anime-sleep-65.gif" alt="">
+    </div>
 </Layout>
+
+<style>
+    div{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        flex-direction: column;
+        gap: 20px;
+        animation: EntradaMantenimiento 1s ease;
+    }
+    img{
+        border-radius: 10px;
+    }
+
+    @keyframes EntradaMantenimiento {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+</style>
