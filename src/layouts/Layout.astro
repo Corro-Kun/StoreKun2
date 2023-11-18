@@ -32,11 +32,12 @@ import {ViewTransitions} from "astro:transitions";
 
 <style is:global>
 	:root {
-		--Text_Color: #188C77;
-		--Text_Color_Hover: #1D9A85;
+		--Text_Color: #fff;
+		--Main_Color: #188C77;
 		--Button_Color: #0F88F2;
 		--Bg_Color: #162840;
 		--Bg_Blur: linear-gradient(to top, rgba(16, 28, 40, 0), rgba(16, 28, 40, 1));
+		--Color_Linear: linear-gradient(to right, #ffffff, #188C77);
 	}
 	@font-face {
 		font-family: 'Cascadia';
@@ -51,7 +52,7 @@ import {ViewTransitions} from "astro:transitions";
 	}
 
 	body{
-		color: var(--Text_Color);
+		color: var(--Main_Color);
 		background-color: var(--Bg_Color);
 	}
 </style>

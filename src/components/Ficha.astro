@@ -35,7 +35,7 @@ const { title, descripcion, image, id } = Astro.props;
         height: 80%;
         width: 15%;
         border-radius: 10px;
-        background-color: #188C77;
+        background-color: var(--Main_Color);
         transition: .5s;
         box-shadow: 0 0 20px #1b4644;
         overflow: hidden;
@@ -54,10 +54,10 @@ const { title, descripcion, image, id } = Astro.props;
         bottom: 0;
         height: 56%;
         width: 100%;
-        border: 1px solid #188C77;
+        border: 1px solid var(--Main_Color);
         backdrop-filter: blur(10px);
         border-radius: 10px 10px 0 0;
-        color: #fff;
+        color: var(--Text_Color);
         overflow: hidden;
     }
     .Div-descripcion-aplication h3{
@@ -83,7 +83,7 @@ const { title, descripcion, image, id } = Astro.props;
     }
     .Ficha-Aplication:hover{
         transform: scale(1.03);
-        box-shadow: 0 0 20px #188C77;
+        box-shadow: 0 0 20px var(--Main_Color);
     }
     .Ficha-button{
         display: flex;
@@ -101,7 +101,7 @@ const { title, descripcion, image, id } = Astro.props;
         box-shadow: 0 2px 5px #666666;
         transition: .2s;
         text-decoration: none;
-        color: #188c77;
+        color: var(--Main_Color);
         font-size: 14px;
     }
     .Ficha-button a:hover{
