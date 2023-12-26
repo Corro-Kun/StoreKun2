@@ -1,5 +1,32 @@
 export const data =[
     {
+        id: "c4c4858f-cbde-5320-81b2-c63cb8e88a0a",
+        title: "Reminders",
+        description: "una aplicación para recordar tus series, películas, animes, etc.",
+        platform: "Android",
+        price: "Gratis",
+        image: "https://res.cloudinary.com/daqrkk4sr/image/upload/v1703624734/store-kun/Reminders/hicacfyzg6yqyxwp0agw.png",
+        logo: "https://res.cloudinary.com/daqrkk4sr/image/upload/v1696623694/store-kun/AudioPlayer/logo_previ_tbhpj0.png",
+        version: "1.0.0",
+        images: [
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1703629386/store-kun/Reminders/ox1kilp3lpje6ycp14xn.png",
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1703629902/store-kun/Reminders/z9e5tc6ujbegn4xqqna5.png",
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1703630088/store-kun/Reminders/kfzk7vuqcl8b8u6hxyzy.png",
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1703630603/store-kun/Reminders/pq0glvfnmqud1usm0atu.png",
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1703630787/store-kun/Reminders/p9jwxvijg7wjy3fb5iop.png"
+        ],
+        info: "Un gestor personal offline con un diseño elegante y minimalista para recordar y organizar tu colección de anime, manga, películas, series y mucho más, Para agregar contenido, simplemente crea una sesión como anime, manga, películas, series, etc. a partir de hay solo tienes que agregar una ficha, con una imagen, descripción, link, etc. y listo, ya tienes tu contenido agregado, para verlo solo tienes que ir a la sesión que lo agregaste y listo, IMPORTANTE: esta aplicación no reproduce anime, manga, películas, series, etc. solo es para recordar y organizar tu colección de anime, manga, películas, series, etc. que tengas en tu dispositivo y ¡Disfruta de la comodidad de tener toda tu colección multimedia a mano y organízala a tu gusto con esta aplicación!",
+        download: "https://www.mediafire.com/file/x5x60qtmdydowm9/Reminders.apk/file",
+        updates:[
+            {
+                version: "1.0.0",
+                data: "Diciembre. 26, 2023",
+                description: "Se libero la primera versión de la aplicación",
+                link: "https://github.com/Corro-Kun/Remember.App/releases/tag/v1.0.0"
+            }
+        ]
+    },
+    {
         id: "74b6a7e0-7b3c-5a2a-b19e-8d642eea8c16",
         title: "Audioplayer",
         description: "un reproductor de audio con un diseño minimalista y elegante",

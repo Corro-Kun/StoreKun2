@@ -11,7 +11,7 @@ const { title, descripcion, image, id } = Astro.props;
 
 <div class="Ficha-Aplication" >
     <picture>
-        <img src={image} alt="Imagen">
+        <img src={image} alt="Imagen" loading="lazy">
     </picture>
     <div class="Div-descripcion-aplication" >
         <div class="Render-Descripcion-Aplication" >
