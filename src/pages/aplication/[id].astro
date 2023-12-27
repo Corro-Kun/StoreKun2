@@ -117,4 +117,24 @@ const app = data.find((item) => item.id === id);
             opacity: 1;
         }
     }
+
+    @media screen and (max-width: 1000px){
+        .Div-Render-Place{
+            width: 95%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+            overflow: scroll;
+        }
+        .Div-Images-Preview{
+            width: 100%;
+        }
+        .Div-Information-Preview{
+            width: 100%;
+        }
+        .Div-Information-Preview h2{
+            width: 100%;
+            font-size: 1.5em;
+        }
+    }
 </style>
