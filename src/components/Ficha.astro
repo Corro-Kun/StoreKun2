@@ -20,7 +20,7 @@ const { title, descripcion, image, id } = Astro.props;
                 <div class="Border-Decore" />
             </div>
             <div>
-                <p>{descripcion}</p>
+                <p class="p-Ficha">{descripcion}</p>
             </div>
             <div class="Ficha-button" >
                 <a href=`/aplication/${id}`>Explorar</a>
@@ -28,6 +28,16 @@ const { title, descripcion, image, id } = Astro.props;
         </div>
     </div>
 </div>
+
+<script>
+    if(window.screen.width <= 1024){
+        const p = document.querySelectorAll('p.p-Ficha');
+        p.forEach((a)=>{
+            const descripcion = a.innerHTML;
+            a.innerHTML = descripcion.substring(0, 50).concat('...')
+        });
+    }
+</script>
 
 <style>
     .Ficha-Aplication{
@@ -106,5 +116,12 @@ const { title, descripcion, image, id } = Astro.props;
     }
     .Ficha-button a:hover{
         background-color: #dbdbdb;
+    }
+
+    @media screen and (max-width: 1024px){
+        .Ficha-Aplication{
+            height: 70%;
+            width: 50%;
+        }
     }
 </style>

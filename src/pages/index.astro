@@ -5,6 +5,7 @@ import Container from "../components/Container.astro";
 import Ficha from "../components/Ficha.astro";
 
 import {data} from "../data/Aplications.ts";
+
 ---
 
 <Layout title="Home" aplication={false}>
@@ -12,7 +13,7 @@ import {data} from "../data/Aplications.ts";
     <Container>
         {
             data.map((item)=>(
-                <Ficha
+                <Ficha 
                 id={item.id} 
                 title={item.title} 
                 descripcion={item.info.substring(0, 108) + "..."} 
