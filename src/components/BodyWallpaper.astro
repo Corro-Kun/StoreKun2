@@ -11,6 +11,8 @@
    <slot />
 </div>
 
+
+
 <style>
     .Video-Main {
         width: 100%;
@@ -27,9 +29,21 @@
         object-fit: cover;
     }
 
+    @media (max-height: 1080px){
+        .Video-Main {
+            width: 100%;
+            height: calc( 90vh + 15px);
+        }
+    }
+
     @media (max-width: 768px) {
+        /*
         .Video-Main {
             height: calc( 82vh + 8px);
+        }
+        */
+        .Video-Main{
+            height: calc( 89vh + 5px);
         }
     }
 
