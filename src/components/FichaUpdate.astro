@@ -77,5 +77,19 @@ const {Imagen, title, date, description, version, url} = Astro.props;
             transform: translateX(0);
         }
     }
+
+    /* Response in movil very big */
+    @media screen and (max-width: 430px){
+        picture{
+            height: 170px;
+            width: 250px;
+        }
+        h4{
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
  
 </style>
