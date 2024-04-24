@@ -29,7 +29,7 @@ const { title, descripcion, image, id } = Astro.props;
     </div>
 </div>
 
-<script>
+<!--<script>
     if(window.screen.width <= 1024){
         const p = document.querySelectorAll('p.p-Ficha');
         p.forEach((a)=>{
@@ -37,7 +37,7 @@ const { title, descripcion, image, id } = Astro.props;
             a.innerHTML = descripcion.substring(0, 50).concat('...')
         });
     }
-</script>
+</script>-->
 
 <style>
     .Ficha-Aplication{
@@ -116,6 +116,26 @@ const { title, descripcion, image, id } = Astro.props;
     }
     .Ficha-button a:hover{
         background-color: #dbdbdb;
+    }
+
+    /* Responsive in laptop medium*/
+    @media screen and (max-width: 1374px){
+        .Ficha-Aplication{
+            height: 90%;
+            width: 17%;
+        }
+        .Div-descripcion-aplication h3{
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        .Div-descripcion-aplication p{
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
     }
 
     @media screen and (max-width: 1024px){
