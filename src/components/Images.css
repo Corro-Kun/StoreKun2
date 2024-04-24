@@ -1,0 +1,55 @@
+.Images-Div-Render{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Images-Img-Main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Images-Img-Main img{
+    height: 300px;
+}
+
+.Images-Div-Imgs{
+    margin-top: 20px;
+    display: flex;
+    height: 210px;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Images-Div-Imgs picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.Images-Div-Imgs img{
+    height: 100px;
+}
+
+/* Response on laptop medium */
+@media screen and (max-width: 1374px){
+    .Images-Img-Main img{
+        height: 200px;
+    }
+    .Images-Div-Imgs picture{
+        height: 80px;
+    }
+    .Images-Div-Imgs img{
+        height: 80px;
+    }
+}

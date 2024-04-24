@@ -1,4 +1,5 @@
-import {useState} from "preact/hooks"
+import {useState} from "preact/hooks";
+import "./Images.css";
 
 export default function Images({images}) {
     const [indexImages, setIndexImages] = useState(0);
@@ -9,46 +10,15 @@ export default function Images({images}) {
 
     return(
         <>
-            <div style={{
-                display: "flex",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-            }}>
-                <picture style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    borderRadius: "5px",
-                    overflow: "hidden",
-                }}>
-                    <img style={{
-                        height: "300px",
-                    }} src={images[indexImages]} alt="" loading={"lazy"} />
+            <div className="Images-Div-Render" >
+                <picture className="Images-Img-Main" >
+                    <img src={images[indexImages]} alt="" loading={"lazy"} />
                 </picture>
-                <div style={{
-                    marginTop: "20px",
-                    display: "flex",
-                    height: "210px",
-                    width: "90%",
-                    flexWrap: "wrap",
-                    justifyContent: "center",
-                    gap: "10px",
-                }}>
+                <div className="Images-Div-Imgs" >
                     {
                         images.map((item, i)=>(
-                            <picture style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                cursor: "pointer",
-                                overflow: "hidden",
-                                borderRadius: "5px",
-                            }} onClick={()=>changeImage(i)} >
-                                <img style={{
-                                    height: "100px",
-                                }} src={item} alt="" loading={"lazy"} />
+                            <picture onClick={()=>changeImage(i)} >
+                                <img src={item} alt="" loading={"lazy"} />
                             </picture>
                         ))
                     }
