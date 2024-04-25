@@ -53,3 +53,8 @@
         height: 80px;
     }
 }
+
+/* Response on the movil very big */
+@media screen and (max-width: 430) {
+   
+}

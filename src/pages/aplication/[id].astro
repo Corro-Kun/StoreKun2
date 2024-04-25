@@ -144,4 +144,20 @@ const app = data.find((item) => item.id === id);
             font-size: 1.5em;
         }
     }
+
+    /* Responsive on mobile very big */
+    @media screen and (max-width: 430px){
+        .Div-Render-Place{
+            flex-direction: column;
+            justify-content: start;
+        }
+        .Div-Images-Preview{
+            margin-top: 20px;
+            margin-bottom: 50px;
+            height: auto;
+        }
+        .Div-Information-Preview{
+            height: auto;
+        }
+    }
 </style>
