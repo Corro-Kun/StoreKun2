@@ -10,12 +10,24 @@
     width: 20%;
     color: var(--Text_Color);
     border-right: 2px solid var(--Main_Color);
+    flex-direction: column;
+}
+
+.ListAplication-Bar h2{
+    text-shadow: 0 0 10px var(--Main_Color);
+}
+
+.ListAplication-Filter{
+    margin: 5px 10px;
 }
 
 .ListAplication-Content{
     display: flex;
     padding: 0 20px;
     width: 80%;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .ListAplication-Title{
@@ -25,4 +37,73 @@
     height: 3%;
     justify-content: space-between;
     align-items: center;
+}
+
+.ListAplication-Title h2{
+    text-shadow: 0 0 10px var(--Main_Color);
+}
+
+.ListAplication-Title input{
+    width: 25%;
+    padding: 3px 4px;
+    font-size: 1em;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--Main_Color);
+    border-radius: 4px;
+    color: var(--Text_Color);
+    outline: none;
+}
+
+.ListAplication-Title input::placeholder{
+    color: var(--Text_Color);
+}
+
+.ListAplication-List{
+    display: flex;
+    height: 90%;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.ListAplication-Ficha{
+    height: 31%;
+    width: 20%;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    flex-direction: column;
+    border: 1px solid var(--Main_Color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.ListAplication-Ficha:hover{
+    height: 36%;
+    box-shadow: 0 0 10px var(--Main_Color);
+    transform: scale(1.02);
+}
+
+.ListAplication-Ficha picture{
+    display: flex;
+    width: 100%;
+    height: 230px;
+    border-radius: 10px 10px 10px 10px;
+    border-bottom: 1px solid var(--Main_Color);
+    overflow: hidden;
+}
+
+.ListAplication-Ficha img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ListAplication-Ficha h3{
+    margin-top: 3px;
+    color: var(--Text_Color);
+    text-align: center;
+    font-size: 1.2em;
+    transition: .3 ease-in-out;
 }
