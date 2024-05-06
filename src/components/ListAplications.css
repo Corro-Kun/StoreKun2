@@ -11,6 +11,16 @@
     color: var(--Text_Color);
     border-right: 2px solid var(--Main_Color);
     flex-direction: column;
+    animation: fadeInX .5s;
+}
+
+@keyframes fadeInX {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .ListAplication-Bar h2{
@@ -18,7 +28,13 @@
 }
 
 .ListAplication-Filter{
+    display: flex;
     margin: 5px 10px;
+    flex-direction: column;
+}
+
+.ListAplication-Filter input{
+    margin-right: 10px;
 }
 
 .ListAplication-Content{
@@ -37,6 +53,16 @@
     height: 3%;
     justify-content: space-between;
     align-items: center;
+    animation: fadeInOp .5s;
+}
+
+@keyframes fadeInOp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .ListAplication-Title h2{
@@ -78,6 +104,16 @@
     overflow: hidden;
     cursor: pointer;
     transition: .3s ease-in-out;
+    animation: fadeIn .5s;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .ListAplication-Ficha:hover{

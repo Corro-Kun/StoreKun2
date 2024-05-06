@@ -17,13 +17,27 @@ export default function ListAplications(){
         setApplications(filter);
     }
 
+    function filterPlatform(event){
+        const value = event.target.value;
+        const filter = data.filter((data)=>(
+            data.platform.toLowerCase().includes(value.toLowerCase())
+        ));
+        setApplications(filter);
+    }
+
     return(
         <div className="ListAplication-Div" >
             <div className="ListAplication-Bar" >
                 <h2>Filtrar</h2>
                 <div className="ListAplication-Filter" >
-                    <input type="checkbox" id="filter1" />
-                    <label htmlFor="filter1" >Filtro 1</label>
+                    <div>
+                        <input type="checkbox" id="filter1" value="Android" onClick={(e)=> filterPlatform(e)} />
+                        <label htmlFor="filter1" >Android</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter2" value="Pc" onClick={(e)=> filterPlatform(e)} />
+                        <label htmlFor="filter2" >Pc</label>
+                    </div>
                 </div>
             </div>
             <div className="ListAplication-Content" >
