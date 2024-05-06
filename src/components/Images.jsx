@@ -18,7 +18,7 @@ export default function Images({images}) {
                     {
                         images.map((item, i)=>(
                             <picture onClick={()=>changeImage(i)} >
-                                <img src={item} alt="" loading={"lazy"} />
+                                <img src={item} alt="" loading="lazy" />
                             </picture>
                         ))
                     }

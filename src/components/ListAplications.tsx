@@ -3,7 +3,6 @@ import {data} from "../data/Aplications.ts";
 import "./ListAplications.css";
 
 export default function ListAplications(){
-    const link = useRef(null);
     const [Applications, setApplications] = useState([]);
 
     useEffect(()=>{
@@ -34,14 +33,17 @@ export default function ListAplications(){
                 </div>
                 <div className="ListAplication-List" >
                     {
-                        Applications.map((data)=>(
-                            <div className="ListAplication-Ficha" onClick={()=> link.current.click()} >
+                        Applications.map((data,i)=>(
+                            <div className="ListAplication-Ficha" onClick={()=> {
+                                const a = document.getElementById(`ListAplication-Url-${i}`);
+                                a.click();
+                            }} >
                                 <picture>
-                                    <img src={data.image} alt={data.title} />
+                                    <img src={data.image} alt={data.title} loading="lazy" />
                                 </picture>
                                 <div>
                                     <h3>{data.title}</h3>
-                                    <a ref={link} href={`/aplication/${data.id}`} style={{display: "none"}} ></a>
+                                    <a id={`ListAplication-Url-${i}`} href={`/aplication/${data.id}`} style={{display: "none"}} ></a>
                                 </div>
                             </div>
                         ))
