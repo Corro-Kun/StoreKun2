@@ -143,3 +143,34 @@
     font-size: 1.2em;
     transition: .3 ease-in-out;
 }
+
+/* Responsive in laptop medium */
+@media screen and (max-width: 1374px) {
+    .ListAplication-Ficha picture{
+        height: 190px;
+    }
+}
+
+/* Responsive in phone very big */
+@media (max-width: 430px) {
+    .ListAplication-Div{
+        padding: 0 10px;
+    }
+    .ListAplication-Bar{
+        display: none;
+    }
+    .ListAplication-Content{
+        width: 100%;
+    }
+    .ListAplication-List{
+        padding: 20px 5px;
+        gap: 30px;
+    }
+    .ListAplication-Ficha{
+        width: 45%;
+        height: 35%;
+    }
+    .ListAplication-Title input{
+        width: 50%;
+    }
+}
