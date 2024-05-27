@@ -5,8 +5,6 @@ export default function WallpaperDinamic({wallpapers}: {wallpapers: string[]}){
     useEffect(()=>{
         let variables = Math.floor(Math.random() * wallpapers.length);
         setWallpaper(wallpapers[variables]);
-        console.log(variables);
-        console.log(wallpapers[variables]);
     },[wallpapers]);
     return(
         <video autoPlay muted loop style={{
@@ -18,7 +16,7 @@ export default function WallpaperDinamic({wallpapers}: {wallpapers: string[]}){
             zIndex: -1,
             objectFit: "cover",
         }} >
-            <source src={wallpaper} type="video/mp4" />
+            <source src={"https://res.cloudinary.com/daqrkk4sr/video/upload/"+`q_auto,f_auto,h_${window.innerHeight},w_${window.innerWidth}`+"/"+wallpaper.split("/")[1]} type="video/mp4" />
         </video>
     );
 }

@@ -9,11 +9,9 @@
         <source src={wallpapers[0]} type="video/mp4" >
     </video>
     */}
-    <WallpaperDinamic wallpapers={wallpapers} transition:persist="true" client:load />
+    <WallpaperDinamic wallpapers={wallpapers} transition:persist="true" client:only="react" />
    <slot />
 </div>
-
-
 
 <style>
     .Video-Main {
