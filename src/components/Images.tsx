@@ -1,10 +1,10 @@
-import {useState} from "preact/hooks";
+import {useState} from "react";
 import "./Images.css";
 
-export default function Images({images}) {
+export default function Images({images}: {images: string[]}) {
     const [indexImages, setIndexImages] = useState(0);
 
-    function changeImage(index) {
+    function changeImage(index: number) {
         setIndexImages(index);
     }
 
@@ -16,8 +16,8 @@ export default function Images({images}) {
                 </picture>
                 <div className="Images-Div-Imgs" >
                     {
-                        images.map((item, i)=>(
-                            <picture onClick={()=>changeImage(i)} >
+                        images.map((item: string, i: number)=>(
+                            <picture onClick={()=>changeImage(i)} key={i} >
                                 <img src={item} alt="" loading="lazy" />
                             </picture>
                         ))

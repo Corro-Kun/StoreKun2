@@ -29,11 +29,11 @@ import {ViewTransitions} from "astro:transitions";
 		<meta name="og:locale" content="es_CO" />
 		<meta name="og:type" content="website" />
 		<title>{title}</title>
-		<ViewTransitions />
+		<ViewTransitions fallback='none' />
 	</head>
 	<body>
 		<Header aplication={aplication} />
-		<BodyWallpaper>
+		<BodyWallpaper >
 			<slot />
 		</BodyWallpaper>
 	</body>

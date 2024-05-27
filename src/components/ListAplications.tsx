@@ -1,25 +1,28 @@
-import {useEffect, useState, useRef} from "preact/hooks";
+import {useEffect, useState} from "react";
 import {data} from "../data/Aplications.ts";
+import {type AppDetails} from "../types/Aplication.ts";
 import "./ListAplications.css";
 
+
 export default function ListAplications(){
-    const [Applications, setApplications] = useState([]);
+    const [Applications, setApplications] = useState<AppDetails[]>([]);
 
     useEffect(()=>{
-        setApplications(data);
+        let cache: AppDetails[] = data;
+        setApplications(cache);
     },[]);
 
-    function filterAplications(event){
+    function filterAplications(event: any){
         const value = event.target.value;
-        const filter = data.filter((data)=>(
+        const filter: AppDetails[] = data.filter((data)=>(
             data.title.toLowerCase().includes(value.toLowerCase())
         ));
         setApplications(filter);
     }
 
-    function filterPlatform(event){
+    function filterPlatform(event: any){
         const value = event.target.value;
-        const filter = data.filter((data)=>(
+        const filter  = data.filter((data)=>(
             data.platform.toLowerCase().includes(value.toLowerCase())
         ));
         setApplications(filter);
@@ -47,9 +50,9 @@ export default function ListAplications(){
                 </div>
                 <div className="ListAplication-List" >
                     {
-                        Applications.map((data,i)=>(
+                        Applications.map((data: AppDetails,i)=>(
                             <div className="ListAplication-Ficha" onClick={()=> {
-                                const a = document.getElementById(`ListAplication-Url-${i}`);
+                                const a = document.getElementById(`ListAplication-Url-${i}`) as HTMLAnchorElement;
                                 a.click();
                             }} >
                                 <picture>

@@ -1,20 +1,21 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import {data} from "../../data/Aplications.ts";
-import Images from "../../components/Images.jsx";
+import Images from "../../components/Images.tsx";
+import { type AppDetails } from "../../types/Aplication";
 
 export function getStaticPaths(){
     return data.map((item) => ({params: {id: item.id}}));
 }
 const {id} = Astro.params;
-const app = data.find((item) => item.id === id);
+const app = data.find((item) => item.id === id) as AppDetails;
 ---
 
 <Layout title={app.title} aplication >
     <div class="Div-Main-Aplication" >
-        <div class="Div-Render-Place" >
+        <div class="Div-Render-Place"  >
             <div class="Div-Images-Preview" >
-                <Images images={app.images} client:visible />
+                <Images images={app?.images} client:load />
             </div>
             <div class="Div-Information-Preview" >
                 <h2>{app.title}</h2>
@@ -46,7 +47,7 @@ const app = data.find((item) => item.id === id);
         backdrop-filter: blur(10px);
         border: 2px solid var(--Main_Color);
         border-radius: 10px;
-        animation: EntradaPlace .3s ease;
+        animation: EntradaPlace .3s ease; 
     }
     .Div-Images-Preview{
         width: 50%;

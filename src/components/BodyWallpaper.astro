@@ -1,13 +1,15 @@
 ---
     import { wallpapers } from "../data/Wallpapers.ts";
+    import WallpaperDinamic from "./WallpaparDinamic";
     //const variables = Math.floor(Math.random() * wallpapers.length);
 ---
 <div class="Video-Main" >
-        
-    <video autoplay muted loop transition:persist >
+    {/* 
+    <video autoplay muted loop transition:persist="true" >
         <source src={wallpapers[0]} type="video/mp4" >
     </video>
-
+    */}
+    <WallpaperDinamic wallpapers={wallpapers} transition:persist="true" client:load />
    <slot />
 </div>
 
