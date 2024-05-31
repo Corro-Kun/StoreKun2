@@ -4,12 +4,10 @@
     //const variables = Math.floor(Math.random() * wallpapers.length);
 ---
 <div class="Video-Main" >
-    {/* 
     <video autoplay muted loop transition:persist="true" >
-        <source src={wallpapers[0]} type="video/mp4" >
+        <source src={"https://res.cloudinary.com/daqrkk4sr/video/upload/"+wallpapers[0]} type="video/mp4" >
     </video>
-    */}
-    <WallpaperDinamic wallpapers={wallpapers} transition:persist="true" client:only="react" />
+    {/*<WallpaperDinamic wallpapers={wallpapers} transition:persist="true" client:only="react" />*/}
    <slot />
 </div>
 
