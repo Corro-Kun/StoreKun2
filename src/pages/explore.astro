@@ -1,11 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import ListAplications from "../components/ListAplications.tsx";
+import Layout from "@/layouts/Layout.astro";
+import ListAplications from "@/components/ListAplications.tsx";
 ---
 
-<Layout title="Aplicaciones" aplication={false} >
+<Layout title="Aplicaciones" >
     <div>
-        <ListAplications  client:visible />
+        <ListAplications client:load />
     </div>
 </Layout>
 

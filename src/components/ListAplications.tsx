@@ -10,6 +10,7 @@ export default function ListAplications(){
     useEffect(()=>{
         let cache: AppDetails[] = data;
         setApplications(cache);
+        console.log("ListAplications.tsx: ",cache);    
     },[]);
 
     function filterAplications(event: any){

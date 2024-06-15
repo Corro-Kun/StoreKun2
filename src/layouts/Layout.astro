@@ -1,13 +1,12 @@
 ---
 interface Props {
 	title: string;
-	aplication: boolean
 }
 
-const { title, aplication } = Astro.props;
+const { title} = Astro.props;
 
-import BodyWallpaper from '../components/BodyWallpaper.astro';
-import Header from '../components/Header.astro';
+import BodyWallpaper from '@/components/BodyWallpaper.astro';
+import Header from '@/components/Header.astro';
 import {ViewTransitions} from "astro:transitions";
 ---
 
@@ -32,7 +31,7 @@ import {ViewTransitions} from "astro:transitions";
 		<ViewTransitions fallback='none' />
 	</head>
 	<body>
-		<Header aplication={aplication} />
+		<Header />
 		<BodyWallpaper >
 			<slot />
 		</BodyWallpaper>

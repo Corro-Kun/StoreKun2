@@ -1,7 +1,7 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import {data} from "../../data/Aplications.ts";
-import Images from "../../components/Images.tsx";
+import Layout from "@/layouts/Layout.astro";
+import {data} from "@/data/Aplications.ts";
+import Images from "@/components/Images.tsx";
 import { type AppDetails } from "../../types/Aplication";
 
 export function getStaticPaths(){
@@ -11,7 +11,7 @@ const {id} = Astro.params;
 const app = data.find((item) => item.id === id) as AppDetails;
 ---
 
-<Layout title={app.title} aplication >
+<Layout title={app.title} >
     <div class="Div-Main-Aplication" >
         <div class="Div-Render-Place"  >
             <div class="Div-Images-Preview" >
