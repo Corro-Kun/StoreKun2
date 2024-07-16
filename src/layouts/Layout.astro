@@ -13,21 +13,23 @@ import {ViewTransitions} from "astro:transitions";
 <!doctype html>
 <html lang="es">
 	<head>
+		<title>{title}</title>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Un rincón de internet para que puedas descargar aplicaciones y programas para tu entretenimiento. Explora todas las aplicaciones desarrolladas por Corro-Kun disponibles en GitHub. Descárgalas gratis desde Store-Kun." />
+		<link rel="canonical" href="https://storekun.vercel.app/">
 		<meta name="viewport" content="width=device-width" />
+		<meta name="keywords" content="aplicaciones, Corro-Kun, GitHub, Store-Kun, descargar aplicaciones">
+		<meta name="author" content="Corro-Kun">
+		<meta property="og:title" content="Todas las Aplicaciones de Corro-Kun en GitHub | Store-Kun">
+		<meta property="og:description" content="Un rincón de internet para que puedas descargar aplicaciones y programas para tu entretenimiento. Explora todas las aplicaciones desarrolladas por Corro-Kun disponibles en GitHub. Descárgalas gratis desde Store-Kun.">
+		<meta property="og:url" content="https://storekun.vercel.app/">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Store-Kun">
+		<meta property="og:locale" content="es_CO">
+		<meta name="robots" content="index, follow">
+		<meta name="googlebot" content="index, follow">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="author" content="Corro-Kun" />
-		<meta name="description" content="Un rincón de internet para que puedas descargar aplicaciones/programas para tu entretenimiento." />
-		<meta name="keywords" content="Corro-Kun, StoreKun, Tienda de software, gratis" />
-		<meta name="og:title" content={title} />
-		<meta name="og:description" content="Un rincón de internet para que puedas descargar aplicaciones/programas para tu entretenimiento." />
-		<meta name="og:url" content={Astro.url} />
-		<meta name="og:site_name" content="StoreKun" />
-		<meta name="og:locale" content="es_CO" />
-		<meta name="og:type" content="website" />
-		<title>{title}</title>
 		<ViewTransitions fallback='none' />
 	</head>
 	<body>

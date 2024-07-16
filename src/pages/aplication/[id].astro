@@ -11,7 +11,7 @@ const {id} = Astro.params;
 const app = data.find((item) => item.id === id) as AppDetails;
 ---
 
-<Layout title={app.title} >
+<Layout title={`Descargar ${app.title} para ${app.platform} | Store-Kun`} >
     <div class="Div-Main-Aplication" >
         <div class="Div-Render-Place"  >
             <div class="Div-Images-Preview" >
