@@ -1,7 +1,7 @@
 import {useState} from "react";
 import "./Images.css";
 
-export default function Images({images}: {images: string[]}) {
+export default function Images({images, altImage}: {images: string[], altImage: string}) {
     const [indexImages, setIndexImages] = useState(0);
 
     function changeImage(index: number) {
@@ -18,7 +18,7 @@ export default function Images({images}: {images: string[]}) {
                     {
                         images.map((item: string, i: number)=>(
                             <picture onClick={()=>changeImage(i)} key={i} >
-                                <img src={item} alt="" loading="lazy" />
+                                <img src={item} alt={altImage+i} loading="lazy" />
                             </picture>
                         ))
                     }

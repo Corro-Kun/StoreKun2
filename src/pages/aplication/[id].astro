@@ -15,7 +15,7 @@ const app = data.find((item) => item.id === id) as AppDetails;
     <div class="Div-Main-Aplication" >
         <div class="Div-Render-Place"  >
             <div class="Div-Images-Preview" >
-                <Images images={app?.images} client:load />
+                <Images images={app?.images} altImage={`Imagen de presentación de la aplicación ${app.title} `} client:load />
             </div>
             <div class="Div-Information-Preview" >
                 <h2>{app.title}</h2>
