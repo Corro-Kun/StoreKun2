@@ -11,7 +11,7 @@ const {Imagen, title, date, description, version, url} = Astro.props;
 ---
 <div class="Ficha-Update" >
     <picture>
-        <img src={Imagen} alt="">
+        <img src={Imagen} alt={title+" "+version}>
     </picture>
     <div class="Ficha-Update-descripcion">
         <p>{date}</p>

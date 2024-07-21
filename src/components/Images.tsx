@@ -12,7 +12,7 @@ export default function Images({images, altImage}: {images: string[], altImage: 
         <>
             <div className="Images-Div-Render" >
                 <picture className="Images-Img-Main" >
-                    <img src={images[indexImages]} alt="" loading={"lazy"} />
+                    <img src={images[indexImages]} alt={altImage+indexImages} loading={"lazy"} />
                 </picture>
                 <div className="Images-Div-Imgs" >
                     {

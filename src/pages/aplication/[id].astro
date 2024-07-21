@@ -11,7 +11,11 @@ const {id} = Astro.params;
 const app = data.find((item) => item.id === id) as AppDetails;
 ---
 
-<Layout title={`Descargar ${app.title} para ${app.platform} | Store-Kun`} >
+<Layout 
+    title={`Descargar ${app.title} para ${app.platform} | Store-Kun`} 
+    description={`Descargar ${app.title} para ${app.platform} totalmente gratis y link directo, aplicación creada por Corro-Kun.`}
+    link={`aplication/${app.id}`}
+>
     <div class="Div-Main-Aplication" >
         <div class="Div-Render-Place"  >
             <div class="Div-Images-Preview" >

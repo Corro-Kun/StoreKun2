@@ -3,7 +3,11 @@ import Layout from "@/layouts/Layout.astro";
 import ListAplications from "@/components/ListAplications.tsx";
 ---
 
-<Layout title="últimas Aplicaciones para Android o Windows | Store-Kun" >
+<Layout 
+    title="últimas Aplicaciones para Android o Windows | Store-Kun" 
+    description="Aquí encontrarás todas las aplicaciones de Corro-Kun creada asta la fecha, puedes explorar y filtrar para encontrar la que te guste"
+    link="explore"
+>
     <div>
         <ListAplications client:load />
     </div>
