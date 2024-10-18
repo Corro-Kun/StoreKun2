@@ -43,11 +43,11 @@ export const data =[
         logo: "https://res.cloudinary.com/daqrkk4sr/image/upload/v1696623694/store-kun/AudioPlayer/logo_previ_tbhpj0.png",
         version: "0.4.0",
         images: [
-            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1715093024/store-kun/AudioPlayer/seoxb7gsvi2ox0xesajw.png",
-            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1715093025/store-kun/AudioPlayer/fx6ia8dowbhiebpuuzvd.png",
-            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1715093025/store-kun/AudioPlayer/v8w7pnxcorjybkp2l3rz.png",
-            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1715093025/store-kun/AudioPlayer/l1sal268pyyaezhvae69.png",
-            "https://res.cloudinary.com/daqrkk4sr/image/upload/v1715093025/store-kun/AudioPlayer/mskwybscnhxjzc2yawoi.png"
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/store-kun/Reminders/optimized/pcebs03t9geboglszm9z",
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/store-kun/Reminders/optimized/hrvcq28yzmaztzl1isql",
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/store-kun/Reminders/optimized/uken5aianeguupbroyi0",
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/store-kun/Reminders/optimized/yumg0ekzhhkabavocagc",
+            "https://res.cloudinary.com/daqrkk4sr/image/upload/store-kun/Reminders/optimized/gghxtbpxcjlpw70alzmi"
         ],
         info: "Un reproductor de audio local sin conexión a internet con un diseño minimalista y elegante que puedes personalizar a tu gusto o preferencias,IMPORTANTE: este reproductor no reproduce música de Spotify, YouTube, etc. solo reproduce música que tengas en tu dispositivo que tenga formato mp3 asta el momento. Para implementar música en el solo tienes que ponerla en la carpeta música que se encuentra usuario/música, para cambiar el fondo de tu aplicación tienes que crear una carpeta en usuario/Videos, que se llame fondos y poner los videos que queras de fondo, solo formato MP4, y ahora DISFRUTA DE TU MÚSICA FAVORITA.",
         download: "https://github.com/Corro-Kun/Audioplayer/releases/download/v0.4.0/Audioplayer_0.4.0_x64-setup.exe",
