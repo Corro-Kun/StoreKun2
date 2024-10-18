@@ -2,15 +2,19 @@ import {useEffect, useState} from "react";
 import {data} from "../data/Aplications.ts";
 import {type AppDetails} from "../types/Aplication.ts";
 import "./ListAplications.css";
+import { set } from "astro:schema";
 
 
 export default function ListAplications(){
     const [Applications, setApplications] = useState<AppDetails[]>([]);
+    const [Platform, setPlatform] = useState<{ [key: string]: boolean }>({
+        android: false,
+        pc: false
+    });
 
     useEffect(()=>{
         let cache: AppDetails[] = data;
         setApplications(cache);
-        console.log("ListAplications.tsx: ",cache);    
     },[]);
 
     function filterAplications(event: any){
@@ -23,10 +27,17 @@ export default function ListAplications(){
 
     function filterPlatform(event: any){
         const value = event.target.value;
-        const filter  = data.filter((data)=>(
-            data.platform.toLowerCase().includes(value.toLowerCase())
-        ));
-        setApplications(filter);
+        const checked = event.target.checked;
+        let cache1 = Platform;
+        cache1[value] = checked;
+        let cache: AppDetails[] = data;
+        if(cache1.android){
+            cache = cache.filter((data)=>(data.platform === "Android"));
+        }else if(cache1.pc){
+            cache = cache.filter((data)=>(data.platform === "Pc"));
+        }
+        setApplications(cache);
+        setPlatform(cache1);
     }
 
     return(
@@ -35,11 +46,11 @@ export default function ListAplications(){
                 <h2>Filtrar</h2>
                 <div className="ListAplication-Filter" >
                     <div>
-                        <input type="checkbox" id="filter1" value="Android" onClick={(e)=> filterPlatform(e)} />
+                        <input type="checkbox" id="filter1" value="android" onClick={(e)=> filterPlatform(e)} />
                         <label htmlFor="filter1" >Android</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="filter2" value="Pc" onClick={(e)=> filterPlatform(e)} />
+                        <input type="checkbox" id="filter2" value="pc" onClick={(e)=> filterPlatform(e)} />
                         <label htmlFor="filter2" >Pc</label>
                     </div>
                 </div>
@@ -52,7 +63,7 @@ export default function ListAplications(){
                 <div className="ListAplication-List" >
                     {
                         Applications.map((data: AppDetails,i)=>(
-                            <div className="ListAplication-Ficha" onClick={()=> {
+                            <div className="ListAplication-Ficha" key={i} onClick={()=> {
                                 const a = document.getElementById(`ListAplication-Url-${i}`) as HTMLAnchorElement;
                                 a.click();
                             }} >

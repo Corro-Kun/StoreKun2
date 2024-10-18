@@ -86,16 +86,17 @@
 }
 
 .ListAplication-List{
+    margin-top: 10px;
     display: flex;
-    height: 90%;
+    justify-content: center;
     padding: 20px 30px;
     flex-wrap: wrap;
     gap: 30px;
 }
 
 .ListAplication-Ficha{
-    height: 31%;
-    width: 20%;
+    height: 190px;
+    width: 200px;
     background: transparent;
     backdrop-filter: blur(30px);
     flex-direction: column;
@@ -117,7 +118,7 @@
 }
 
 .ListAplication-Ficha:hover{
-    height: 36%;
+    height: 230px;
     box-shadow: 0 0 10px var(--Main_Color);
     transform: scale(1.02);
 }
@@ -125,7 +126,7 @@
 .ListAplication-Ficha picture{
     display: flex;
     width: 100%;
-    height: 230px;
+    height: 190px; 
     border-radius: 10px 10px 10px 10px;
     border-bottom: 1px solid var(--Main_Color);
     overflow: hidden;
@@ -144,13 +145,6 @@
     transition: .3 ease-in-out;
 }
 
-/* Responsive in laptop medium */
-@media screen and (max-width: 1374px) {
-    .ListAplication-Ficha picture{
-        height: 190px;
-    }
-}
-
 /* Responsive in phone very big */
 @media (max-width: 430px) {
     .ListAplication-Div{
@@ -165,10 +159,6 @@
     .ListAplication-List{
         padding: 20px 5px;
         gap: 30px;
-    }
-    .ListAplication-Ficha{
-        width: 45%;
-        height: 35%;
     }
     .ListAplication-Title input{
         width: 50%;
